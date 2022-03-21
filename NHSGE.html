@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cuong Hoang</title>
+    <link rel="shortcut icon" href="img/a-icon1.ico" />
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll"  href="index.html">Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 text-center" style="text-align: left">
+                    <!-- <hr class="light"> -->
+                    <h2 style="font-style: italic">2020 National High School Graduation Examination Analysis<h2>
+                    <h4>CONCEPT</h4>
+                    <p class="text-faded" style="font-size: small">
+                        The National High School Graduation Examination (NHSGE) is considered the most critical exam of high-schoolers in Vietnam. It serves two purposes, high school graduation, and university entrance. The subjects are Maths, Literature, English, Physics, Chemistry, Biology, History, Geography, and Civic Education.
+                        This project helps journalists analyze and discover some insight into the NHSGE's result in 2020.</p>
+                    <h4>DATA</h4>
+                    <p class="text-faded" style="font-size: small">
+                        The raw data, scrapped from diemthi.hcm.edu.vn, the official website of the Vietnam Ministry of Education & Training, is processed to be a clean dataset.
+                        The clean dataset includes Registration Number, Date of Birth, and the scores of subjects. The maximum score is 10, and the minimum is 0. If a student does not take or register for a subject, the score will be -1.
+                    <br><br>
+                    In the web scrapping phase, some Registration Numbers are invalid. The simple technique of try-except solved the problem. I got the list of invalid Registration Numbers then eliminated it from the process. 
+                    In the cleaning phase, because the raw data results from the web scrapping, I cleaned it based on HTML knowledge. For students with maximum scores, I need to handle some exceptions.
+                    The student's name is Vietnamese, so I have decoded it for readability. 
+                    </p>
+                    <h4>PROCESS</h4>
+                    <p class="text-faded" style="font-size: small">
+                    In order to analyze the NHSGE data and generate insights out of it, I followed the process:
+                    <ul class="text-faded" style="font-size: small">
+                        <li>
+                        Scrapped the data from web
+                        </li>
+                        <li>
+                        Cleaned and handled anomalies and exceptions
+                        </li>
+                        <li>
+                        Performed Exploratory Data Analysis using Python
+                        </li>
+                        <li>
+                        Draw some interesting insights
+                        </li>
+                    </ul>
+                    </p>
+                    <h4>INSIGHTS</h4>
+                    <ul class="text-faded" style="font-size: small">
+                        <li>
+                        The oldest test-taker was born in 1963(Pic #1).
+                        </li>
+                        <li>
+                        There is no considerable gap between the average performances of older test-takers and grade-12 students(Pic #2).  
+                        </li>
+                        <li>
+                        The most popular last name of student is Nguyễn(Pic #3). 
+                        </li>
+                        <li>
+                        Vietnamese Students perform Maths better than English(Pic #4). 
+                        </li>
+                    </ul>
+                   <a href="https://github.com/karldata/2020-National-High-School-Graduation-Examination-Analysis" " class="btn btn-primary btn-xl page-scroll" target="_blank">View Project</a>
+                </div>
+                <div class="col-lg-4 text-center" style="padding-top: 100px">
+                <img src="img/NHSGE/Age-Distribution.png" class="img-responsive" alt="" style="margin :auto">
+                <p>Bar chart showing the year of birth distribution</p>
+                <img src="img/NHSGE/Avarage-Score-Age-Group.png" class="img-responsive" alt="" style="margin :auto">
+                <p>Avarage Score by Age Group</p>
+                <img src="img/NHSGE/Last-Name-WordCloud.png" class="img-responsive" alt="" style="margin :auto">
+                <p>WordCloud of Student's Last Name</p>
+                <img src="img/NHSGE/Maths-English.png" class="img-responsive" alt="" style="margin :auto">
+                <p>Stacked Distribution of Maths and English Scores</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row" class="call-to-action">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Get In Touch!</h2>
+                    <hr class="primary">
+                </div>
+                <div class="col-lg-2 col-lg-offset-3 text-center">
+                    <a href="https://github.com/karldata" class="fa fa-github fa-3x wow bounceIn"></a>
+                </div>
+                <div class="col-lg-2  text-center">
+                    <a href="https://www.linkedin.com/in/cuong-hv/" class="fa fa-linkedin fa-3x wow bounceIn"></a>
+                </div>
+                <!--div class="col-lg-1 text-center">
+                    <a class="fa fa-phone fa-3x wow bounceIn"></i>
+                </div-->
+                <div class="col-lg-2 text-center">
+                    <a href="mailto:cuong.ca@outlook.com" class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+
+</body>
+
+</html>
