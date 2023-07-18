@@ -1,4 +1,4 @@
-# cuonghv.github.io
+# cuong.github.io
 Cuong Hoang Portfolio
 
 Based on the template from start bootstrap
